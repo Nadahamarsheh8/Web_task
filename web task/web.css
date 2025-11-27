@@ -1,0 +1,315 @@
+:root {
+  --bg: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --primary: #2563eb;
+  --soft: #f3f4f6;
+  --border: #e5e7eb;
+  --dark: #111827;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Cairo", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* حاوية عامة */
+.container {
+  width: 95%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* النافبار */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  z-index: 10;
+}
+.nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+}
+.logo {
+  font-weight: 700;
+  color: var(--dark);
+  letter-spacing: 0.5px;
+}
+.nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  margin-left: 18px;
+  font-weight: 600;
+}
+.nav-links a:hover { color: var(--primary); }
+
+/* البانر */
+.hero {
+  background: linear-gradient(90deg, #eef2ff, #f8fafc);
+  border-bottom: 1px solid var(--border);
+}
+.hero-content {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 24px;
+  padding: 40px 0;
+}
+.hero-text h1 {
+  margin: 0 0 10px;
+  font-size: 32px;
+}
+.hero-text p { color: var(--muted); }
+.hero-covers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.cover {
+  background: #dbeafe;
+  border: 1px solid #bfdbfe;
+  color: #0c4a6e;
+  padding: 30px 10px;
+  text-align: center;
+  font-weight: 700;
+  border-radius: 8px;
+}
+
+/* المزايا */
+.features { padding: 28px 0; }
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.feature-box {
+  background: var(--soft);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 10px;
+}
+.feature-box h3 { margin: 0 0 8px; }
+
+/* من نحن */
+.about { padding: 34px 0; }
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  align-items: center;
+}
+.illustration-box {
+  background: #fde68a;
+  border: 1px solid #fcd34d;
+  border-radius: 14px;
+  height: 220px;
+  display: grid;
+  place-items: center;
+  color: #92400e;
+  font-weight: 700;
+}
+.about-text h2 { margin: 0 0 10px; }
+.btn {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-weight: 700;
+}
+.btn:hover { opacity: 0.9; }
+
+/* الأقسام العامة */
+.section { padding: 34px 0; }
+.section.alt { background: #fbfbfc; }
+.section-title {
+  margin: 0 0 16px;
+  font-size: 26px;
+}
+
+/* كروت الكتب */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.card {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #fff;
+  padding: 12px;
+}
+.thumb {
+  height: 140px;
+  background: #e0e7ff;
+  border: 1px solid #c7d2fe;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  color: #3730a3;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.card h4 { margin: 6px 0 8px; }
+.link {
+  color: var(--primary);
+  font-weight: 700;
+  text-decoration: none;
+}
+.link:hover { text-decoration: underline; }
+
+/* المراجعات */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.review {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px;
+  background: #fff;
+  text-align: center;
+}
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #cffafe;
+  color: #0e7490;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 8px;
+}
+.stars { color: #f59e0b; }
+
+/* كتاب رقمي */
+.digital {
+  background: linear-gradient(90deg, #f3f4f6, #ffffff);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.digital-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  padding: 34px 0;
+}
+.digital-illustration .illustration-box {
+  background: #ccfbf1;
+  border-color: #99f6e4;
+  color: #115e59;
+}
+
+/* المدونة */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.blog-card {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #fff;
+  overflow: hidden;
+}
+.blog-thumb {
+  height: 140px;
+  background:
+#fee2e2;
+  border-bottom: 1px solid var(--border);
+  display: grid;
+  place-items: center;
+  color: #9f1239;
+  font-weight: 700;
+}
+.blog-body { padding: 12px; }
+.badge {
+  display: inline-block;
+  background: #111827;
+  color: #fff;
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  margin-bottom: 6px;
+}
+
+/* الفوتر */
+.footer {
+  background: #0f172a;
+  color: #cbd5e1;
+  margin-top: 20px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  padding: 24px 0;
+}
+.footer-col h4 {
+  color: #fff;
+  margin: 0 0 10px;
+}
+.footer a {
+  color: #cbd5e1;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 6px;
+}
+.footer a:hover { color: #fff; }
+.newsletter {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+}
+.newsletter input {
+  flex: 1;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  background: #0b1220;
+  color: #cbd5e1;
+}
+.newsletter button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  background: #2563eb;
+  color: #fff;
+  font-weight: 700;
+}
+.copy {
+  border-top: 1px solid #1f2937;
+  text-align: center;
+  padding: 10px 0 16px;
+  font-size: 14px;
+}
+
+/* تجاوب */
+@media (max-width: 992px) {
+  .features-grid { grid-template-columns: repeat(2, 1fr); }
+  .cards { grid-template-columns: repeat(3, 1fr); }
+  .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+  .digital-grid { grid-template-columns: 1fr; }
+  .about-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero-content { grid-template-columns: 1fr; }
+  .hero-covers { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .nav-links { display: none; } /* بسيط: إخفاء الروابط على الشاشات الصغيرة */
+  .cards { grid-template-columns: repeat(2, 1fr); }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .blog-grid { grid-template-columns: 1fr; }
+  .features-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+}
